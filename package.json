@@ -9,7 +9,7 @@
   "author": "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@persistr/settings": "^1.0.3"
+    "@persistr/settings": "^1.0.4"
   },
   "browserify": {
     "transform": [
