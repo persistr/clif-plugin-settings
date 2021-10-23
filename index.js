@@ -5,11 +5,10 @@ let name = '.cli'
 const settings = {
   initialize: (toolbox) => {
     const isBrowser = typeof window !== 'undefined' && ({}).toString.call(window) === '[object Window]'
-    if (isBrowser) {
-      toolbox.settings = Settings.localStorage(`${name}`)
-    }
-    else {
-      toolbox.settings = Settings.file(`${os.homedir}/${name}`)
+    return {
+      toolbox: {
+        settings: isBrowser ? Settings.localStorage(`${name}`) : Settings.file(`${os.homedir}/${name}`)
+      }
     }
   }
 }
